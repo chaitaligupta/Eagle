@@ -70,6 +70,25 @@
             <artifactId>eagle-security-userprofile-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>eagle</groupId>
+            <artifactId>eagle-security-hive</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.storm</groupId>
+                    <artifactId>storm-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>org.mortbay.jetty</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
         <!-- unit test -->
         <dependency>
@@ -87,6 +106,7 @@
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.version}</artifactId>
+            <version>${spark.core.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.scopt</groupId>

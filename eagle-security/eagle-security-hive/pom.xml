@@ -34,7 +34,12 @@
 	      <groupId>eagle</groupId>
 	  	  <artifactId>eagle-storm-jobrunning-spout</artifactId>
           <version>${project.version}</version>
-	   </dependency>	   
+	   </dependency>
+      <dependency>
+          <groupId>eagle</groupId>
+          <artifactId>eagle-storm-jobhistory-spout</artifactId>
+          <version>${project.version}</version>
+      </dependency>
 	   <dependency>
 	      <groupId>org.apache.curator</groupId>
 	  	  <artifactId>curator-framework</artifactId>
